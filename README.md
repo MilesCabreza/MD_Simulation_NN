@@ -2,7 +2,11 @@ Neural Network Model for Predicting Monoclonal Antibody Binding Affinity
 
 **FINAL MODEL**
 
+(env: silcsNN & esm3)
+
 final_model_script.py - runs saved model as well and calls upon additional script (esm_embed_seq_finalmodel.py) to generate embeddings. Plots all the results.
+                        Embedding sequence specified inside this code (light chain and heavy chain). Uses silcsNN enviroment but script switches to esm3 env if
+                        generating sequence.
 
 esm_embed_seq_finalmodel.py - ran inside the esm3 directory (copied off github) in order to generate single embedding 
 
@@ -21,7 +25,11 @@ Getting SILCS training Dataset (env: dataset_creation)
 Making embeddings (env: esm3)
 
 1. Collect fab sequences (fab_sequences.xlsx)
-2. esm_embed_seq.py - this is a folder I run out of the ESM3 directory that was copied off of github.
+2. esm_embed_seq.py - this is a folder I run out of the ESM3 directory that was copied off of github. esm3-small-2024-08 is the specific model.
+   https://github.com/evolutionaryscale/esm
+   GITHUB LINK ABOVE
+   https://forge.evolutionaryscale.ai/
+   Where you acquire an API key
 
 Make full Dataset (env: dataset_creation)
 
@@ -32,6 +40,5 @@ Model (env: silcs_NN)
 
 1. train_model.py - uses created dataset and splits it into 3 groups. Training (70%), Validation (15%), Test (15%). A csv for the test results is created showing all the rows of residues, the embeddings, the predictions for each affinity groups, and which antibody they belong to.
 2. ANN_stats.py - creates graphing data and csv with table results
-
 
 
