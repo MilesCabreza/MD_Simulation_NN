@@ -26,9 +26,13 @@ Making embeddings (env: esm3)
 
 1. Collect fab sequences (fab_sequences.xlsx)
 2. esm_embed_seq.py - this is a folder I run out of the ESM3 directory that was copied off of github. esm3-small-2024-08 is the specific model.
+
    https://github.com/evolutionaryscale/esm
+
    GITHUB LINK ABOVE
+
    https://forge.evolutionaryscale.ai/
+
    Where you acquire an API key
 
 Make full Dataset (env: dataset_creation)
